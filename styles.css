@@ -180,7 +180,7 @@ button:hover{
 
 @media screen and (min-width:700px){
     .container, .thankyou{
-        max-width:350px;
+        max-width:380px;
         max-height: 420px;
         font-size: larger;
         padding: 20px 30px 40px 30px;
