@@ -4,6 +4,7 @@ var container = document.querySelector('.container');
 var btn = document.querySelector('button');
 var span = document.querySelector('.demo span');
 var att = document.querySelector('.attribution');
+var back = document.querySelector('.back');
 
 window.addEventListener('load',function(e){
     container.classList.add('show');
@@ -24,7 +25,7 @@ function foreach(each){
         } else{
             each.style.backgroundColor = '';
         }
-            span.textContent = text;
+            span.textContent = Number(text);
     })
 }
 
@@ -37,9 +38,17 @@ function remove(each){
 btn.addEventListener('click',function(e){
    
   thankYou.style.display = 'block';
-   thankYou.classList.add('show');
+  thankYou.classList.add('show');
   container.style.display = 'none';
-
-
+ 
     
+})
+
+back.addEventListener('click',function(e){
+    container.style.display = 'block';
+    container.classList.add('show');
+    thankYou.style.display = 'none';
+    rate.forEach(remove);
+    span.textContent = 0;
+  
 })
